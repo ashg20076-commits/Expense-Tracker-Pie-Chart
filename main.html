@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Expsense Tracker</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <h1>Expense ❖ Tracker</h1>
+
+        <div id="addExpense">
+            <input id="expenseName" type="text" placeholder="Expense name" class="controls">
+            <input id="expenseAmount" type="number" min="0" step="0.01" class="controls" placeholder="Cost $">
+            <input id="savingsAmount" type="number" min="0" step="0.01" class="controls" placeholder="Savings $">
+
+            <button id="add" onclick="add()">Add</button>
+            <button id="removeAll" onclick="removeAll()">Remove ALL</button>
+        </div>
+
+        <div id="layout">
+            <div id="output">
+                <p>Savings Remaining: $<span id="savingsLeft">0.00</span></p>
+                <p>Total Spent: $<span id="totalSpent">0.00</span></p>
+
+                <ul id="list">
+                </ul>
+
+                <div id="Graph"></div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+            <script src="index.js"></script>
+
+    </body>
